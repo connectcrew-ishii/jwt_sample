@@ -6,7 +6,7 @@ import os
 print("clientID:"+os.environ["clientID"])
 print("clientSecret:"+os.environ["clientSecret"])
 print("EID:"+os.environ["enterpriseID"])
-print("publicKeyID:"+os.environ["publicKeyID"])
+print("keyID:"+os.environ["keyID"])
 
 """
 # 認証
