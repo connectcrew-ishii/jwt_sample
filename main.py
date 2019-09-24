@@ -1,7 +1,4 @@
 # -*- coding: utf-8 -*-
-# import urllib.request
-# print(urllib.request.getproxies())
-
 
 from boxsdk import JWTAuth, Client
 import os
