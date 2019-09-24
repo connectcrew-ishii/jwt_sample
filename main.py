@@ -8,7 +8,7 @@ auth = JWTAuth(
         client_id=os.environ["clientID"],
         client_secret=os.environ["clientSecret"],
         enterprise_id=os.environ["enterpriseID"],
-        jwt_key_id=os.environ["publickeyID"]
+        jwt_key_id=os.environ["publicKeyID"]
         )
 client = Client(auth)
 user = client.user().get()
