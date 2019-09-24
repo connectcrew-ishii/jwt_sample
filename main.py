@@ -3,18 +3,12 @@
 from boxsdk import JWTAuth, Client
 import os
 
-print("clientID:"+os.environ["clientID"])
-print("clientSecret:"+os.environ["clientSecret"])
-print("EID:"+os.environ["enterpriseID"])
-print("keyID:"+os.environ["keyID"])
-
-"""
 # 認証
 auth = JWTAuth(
         client_id=os.environ["clientID"],
         client_secret=os.environ["clientSecret"],
         enterprise_id=os.environ["enterpriseID"],
-        jwt_key_id=os.environ["publicKeyID"],
+        jwt_key_id=os.environ["keyID"],
         )
 client = Client(auth)
 user = client.user().get()
@@ -29,4 +23,3 @@ user_client = client.as_user(user_to_impersonate)
 # ファイルの情報取得
 fileResponse = user_client.file("514033811180").get_items(limit=5)
 print(fileResponse)
-"""
