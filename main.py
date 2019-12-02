@@ -9,7 +9,7 @@ auth = JWTAuth(
     enterprise_id=os.environ["enterpriseID"],
     jwt_key_id=os.environ["publickeyID"],
     rsa_private_key_data=os.environ['privateKey'],
-    rsa_private_key_passphrase=b'047dac7e6cd83f6b2a858014b50feb40',
+    rsa_private_key_passphrase='047dac7e6cd83f6b2a858014b50feb40'.encode(),
 )
 
 access_token = auth.authenticate_instance()
